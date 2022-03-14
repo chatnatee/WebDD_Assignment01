@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <header>
+        <h1>
+            Assignment 1
+        </h1>
+    </header>
+</head>
+<body>
+    <script>
+            
+        function addRow()
+        {
+            var username = document.getElementById('username').value;
+             var address = document.getElementById('address').value;
+              var age = document.getElementById('age').value;
+              
+              var table = document.getElementsByTagName('table')[0];
+              
+              var newRow = table.insertRow(table.rows.length/2+1);
+              
+              var cel1 = newRow.insertCell(0);
+              var cel2 = newRow.insertCell(1);
+              var cel3 = newRow.insertCell(2);
+              
+              cel1.innerHTML = username;
+              cel2.innerHTML = address;
+              cel3.innerHTML = age;
+        }
+        
+        function onsubmitFunction(){
+            
+            alert("Enter your Username")
+            alert("Enter your Address")
+            alert("Enter your Age")
+            alert("And don't forget to click Add Row button")
+        }
+        onsubmitFunction()
+    </script>
+    
+</head>
+
+<body>
+    
+    <label class="label01">
+        Username :
+    </label>
+        <input type="text" name="username" id="username" /><br/><br/>
+    <label>
+        Address :
+    </label>
+        <input type="text" name="address" id="address" /><br/><br/>
+    <label>
+        Age :
+    </label>
+        <input type="number" name="age" id="age" /><br/><br/>
+    <button onclick="addRow();">Add Row</button><br/><br/>
+
+    <table border="1">
+        
+        <tr>
+            <th>Username</th>
+            <th>Address</th>
+            <th>Age</th>
+        </tr>
+        
+       
+    </table>
+
+</body>
+
+</html>
+</body>
